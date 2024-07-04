@@ -1,0 +1,158 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "lato";
+}
+
+.background-image-container {
+    background: url('/media/homepage_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.letter-spacing {
+    letter-spacing: 3px;
+}
+
+.engraved-text {
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8), -1px -1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.gap {
+    margin-top: 12rem;
+}
+
+.gap-2 {
+    margin-bottom: 8rem;
+}
+
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.nav-link .fa-user, .nav-link .fa-shopping-bag {
+    color: #5C4033;
+}
+.nav-link:hover .fa-user, .nav-link:hover .fa-shopping-bag {
+    color: #a87861;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+    background-color: #a8776157;
+}
+
+.shop-now-button {
+    background: #5C4033;
+    color: white;
+    min-width: 180px;
+}
+
+.btn-db {
+    background: #5C4033;
+    color: white;
+}
+
+.button-shadow{
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-db:hover,
+.btn-db:active,
+.btn-db:focus {
+    background: #a87861;
+    color: white;
+}
+
+.text-db {
+    color: #5C4033;
+}
+
+.border-db {
+    border: 1px solid #5C4033;
+}
+
+.bg-db {
+    background: #5C4033;
+}
+
+.blurred-background {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+
+.footer-section-box{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: static;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.footer-subheading{
+    font-family: 'lato', sans-serif;
+    font-weight: 100;
+    font-size: small;
+
+}
+
+.socials a{
+    color: whitesmoke;
+    padding: 5px 10px;
+}
+
+.socials a:hover{
+    border-radius: 25%;
+    background-color: rgba(237, 236, 236, 0.1);
+}
+
+.socials i{
+    font-size: 25px;
+}
+
+
+/* --------------------------------- Media queries */
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}

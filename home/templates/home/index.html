@@ -1,6 +1,49 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">It works!</h1>
+
+<div class="container-fluid background-image-container outer-box">
+    <div class="container mx-auto text-center gap-2 gap">
+        
+        <div class="row justify-content-center page-title">
+            <div class="col-12 col-md-8 text-center">
+                <h3 class="display-4 logo-font text-db engraved-text letter-spacing">
+                    <em>Crafts beyond the<br>ordinary</em>
+                </h3>
+            </div>
+        </div>
+        
+        <div class="container gap">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10">
+                    <div class="blurred-background p-4">
+                        <h3 class="text-center text-db">Discover Our Unique Crafts</h3>
+                        <p class="text-center text-db">
+                            Our shop offers a diverse range of handmade crafts, each one crafted with care and attention to detail. From beautiful pottery to intricately woven textiles, 
+                            you'll find items that are not only visually stunning but also made to last. Explore our collection and find the perfect piece to add to your home or to gift 
+                            to a loved one.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center my-5">
+            <h4>
+                <a href="#" class="shop-now-button btn rounded-5 text-uppercase py-3 letter-spacing button-shadow">Browse shop</a>
+            </h4>
+        </div>
+
+    </div>
+</div>
+
 {% endblock %}
