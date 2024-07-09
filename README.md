@@ -1,131 +1,673 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<p align="center"><img src="static/favicon/android-chrome-512x512.png"/></p>
 
-Welcome Husnain Raza,
+<br>
+<br>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# Celestial**Craft**
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+<br>
 
-## Gitpod Reminders
+*CelestialCraft is an e-commerce platform dedicated to bringing the beauty and artistry of handmade crafts and artisanal goods to a global audience. Our store is a haven for those who appreciate the time-honored traditions of craftsmanship and the unique touch of human creativity. Here, customers can discover a wide range of meticulously crafted items, from elegant home decor to bespoke accessories and personalized gifts.*
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+<br>
 
-`python3 -m http.server`
+## Table of Contents
 
-A blue button should appear to click: _Make Public_,
+<br>
 
-Another blue button should appear to click: _Open Browser_.
+- [Project Overview](#project-overview)
+- [Live Site](#live-site)
+- [Repository](#repository)
+- [Author](#author)
+- [Target Audience](#target-audience)
+- [Project Goals](#project-goals)
+- [User Stories](#user-stories)
+- [Developer](#developer)
+- [Design choices](#design-choices)
+- [Wireframes](#wireframes)
+- [Features](#features)
+- [Interactive Design Elements](#interactive-design-elements)
+- [Implemented features](#implemented-features)
+- [Future features](#future-features)
+- [Version Control](#version-control)
+- [Testing](#testing)
+- [Accessibility Testing](#accessibility-testing)
+- [Examples of Responsive design](#examples-of-responsive-design)
+- [Defects list](#defects-list)
+- [Outstanding defects](#outstanding-defects)
+- [Technologies used](#technologies-used)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Content and Media](#content-and-media)
+- [Acknowledgements](#acknowledgements)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+<br>
 
-A blue button should appear to click: _Make Public_,
+## Project Overview
 
-Another blue button should appear to click: _Open Browser_.
+<br>
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![cook it website display](bigpot/static/images/responsiveui.png)
 
-To log into the Heroku toolbelt CLI:
+"Cook it" is aimed at dessert enthusiasts of all skill levels, from amateur home cooks to seasoned bakers. Whether you're looking to discover new dessert recipes, share your own culinary creations, engage with a vibrant community of like-minded individuals, or simply indulge your sweet tooth, "Cook it" provides a welcoming and inclusive platform for everyone passionate about desserts
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<br>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+## Live Site
 
-### Connecting your Mongo database
+- https://cook-it-31a1cb906548.herokuapp.com/
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+<br>
 
-------
+## Repository
 
-## Release History
+- https://github.com/MrHraza/Cook-it
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<br>
 
-**June 18, 2024,** Add Mongo back into template
+## Author
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+Developer  -  *Husnain Raza*
 
-**May 28 2024:** Fix Mongo and Links installs
+<br>
 
-**April 26 2024:** Update node version to 16
+## Target Audience
 
-**September 20 2023:** Update Python version to 3.9.17.
+<br>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+*   **Dessert Enthusiasts:** Individuals who have a passion for desserts and enjoy exploring new recipes, techniques, and flavor combinations.
+    
+*   **Home Cooks:** People who love to bake and create delicious desserts in the comfort of their own kitchens, ranging from beginners to experienced home cooks.
+    
+*   **Food Bloggers and Influencers:** Content creators who specialize in sharing food-related content, including dessert recipes, cooking tutorials, and culinary tips.
+    
+*   **Culinary Enthusiasts:** Individuals who have a general interest in cooking and baking and are eager to expand their culinary repertoire with sweet treats.
+    
+*   **Community-Minded Individuals:** People who value online communities and enjoy engaging with others who share similar interests, such as exchanging recipe ideas, providing feedback, and participating in discussions about desserts.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+  
+<br>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Project Goals
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<br>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+1. **Showcase Skills:** Demonstrate skills using coding languages; html, css, javascript, python, flask, jinja.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+2. **User-Friendly Design:** Create an appealing website layout that ensures easy navigation for visitors, allowing them to access information effortlessly.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+3. **Professional Presentation:** Craft a professional online presence for Husnain, incorporating a clean design, well-organized content, and easy-to-read sections, such as about me, and experience and referneces.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+4. **Mobile Responsiveness:** Ensure the website is responsive across various devices, including smartphones, tablets, and desktops, optimizing the user experience for all visitors.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+5. **Call-to-Action (CTA):** Include clear call-to-action elements, such as a contact form or buttons and prompting visitors to engage further.
+   
+<br>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## User Stories
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+<br>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+1. I want to view a list of recipes so that I can explore different deserts.
+2. I want to view the ingredients and method of a recipe so that I can understand how to prepare the dish.
+3. I want to add comments on the Community page when I am logged in so that I can engage with the website and its community.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<br>
 
-------
+## Developer
 
-## FAQ about the uptime script
+<br>
 
-**Why have you added this script?**
+As a Developer I want to push myself and demonstrate my ability with different coding languages in combination.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<br>
 
-**How will this affect me?**
+## Design choices
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+<br>
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+#### Colours
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+In this project, the color palette, I chose, consisting of black, white, light grey, and dark grey evokes a sleek, modern, and sophisticated aesthetic. 
 
-**So….?**
+This combination often conveys a sense of professionalism, elegance, and minimalism. 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+It may also elude to a theme of sophistication and refinement, appealing to users who appreciate clean and contemporary design. 
 
-**Can I opt out?**
+Additionally, it can create a sense of balance and clarity, allowing the *focus* to remain on the content, whether it's showcasing mouthwatering dessert images or providing insightful baking tips.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+<br>
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+#### Typography
 
-**Anything more?**
+I used two fonts on this website for their combined effect; Lora and Times New Roman.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+*   **Lora:** This is a serif font with a modern twist. Its graceful curves and balanced proportions provide a touch of sophistication while maintaining readability. Lora's versatility makes it suitable for both body text and headings.
+    
+*   **Times New Roman:** This is a well-known serif font that exudes tradition and professionalism. Its clean lines and distinctive letterforms make it highly legible, especially in longer passages of text. Times New Roman is often associated with formal documents and publications, giving the website a polished and authoritative feel.
 
----
+Thus, by combining Lora and Times New Roman, one can create a harmonious typographic palette that enhances the overall visual appeal. Lora adds a contemporary flair, while Times New Roman brings a sense of familiarity and credibility, resulting in a refined and inviting user experience.
 
-Happy coding!
+<br>
+
+#### Imagery
+
+Four images in total of the finished dessert of the given recipe can be seen on the website.
+
+<br>
+
+#### Site Structure
+
+I have opted for a multi-page website as this offers flexibility, organization, and scalability, making it an effective platform for "Cook it" to showcase its diverse range of dessert recipes, culinary resources, and community engagement features to its audience.
+
+<br>
+
+## Wireframes
+
+<br>
+
+- desktop > general template to follow for all pages
+
+![computerwireframe](bigpot/static/images/computer.jpg)
+
+- tablet/phone > general template to follow for all pages
+
+![phonewireframe](bigpot/static/images/phone.jpg)
+
+<br>
+
+## Features
+
+<br>
+
+From the user stories I have understood that what the client requires is a website that showcases the following:
+
+*Clean and Intuitive Design:*
+- Visually appealing layout with adequate white space. Easy-to-read fonts and appropriate font sizes. Consistent color scheme that complements the content.
+
+*Clear Navigation:* 
+- Intuitive menu or navigation bar for easy access to different pages.
+  
+*Different pages:* 
+- Namely; About, contact, community/forum.
+
+*Visual Enhancements:*
+- High-quality images, that are relevant and add value.
+  
+*Mobile Responsiveness:*
+- Optimized for various devices, ensuring a seamless experience on mobile.
+  
+*Social Media Integration:*
+- Links to relevant social media (Twitter, facebook, Instagram etc.).
+
+*Call-to-Action (CTA):*
+- A clear CTA for users i.e contact form.
+
+<br>
+
+## Interactive Design Elements
+
+<br>
+
+**menu**  
+- Hovering over a menu item *subtly* (see 'contact us') hightlights the item.
+
+![menu](bigpot/static/images/menu.png)
+
+- Menu is condensed to a dropdown on smaller screens. (see hamburger icon)
+
+![hamburger-menu](bigpot/static/images/hamburger-menu.png)
+
+
+**Buttons** 
+- Working/linked buttons are used on the website (see 'edit' or 'delete' on the community page).
+
+![buttons](bigpot/static/images/buttons.png)
+
+
+**Contact form**
+- This is a working contact form that is connected to the clients Gmail account allowing him to respond to messages.
+
+![contact form](bigpot/static/images/contactform.png)
+
+Then sent.
+
+![message sent](bigpot/static/images/messagesent.png)
+
+
+**Social links**
+- Cook it socials can be found here, hovering over twitter to highlight.
+
+![social links](bigpot/static/images/sociallinks.png)
+
+
+**Sign-up/Login**
+- Sign-up form 
+
+![signupform](bigpot/static/images/signupform.png)
+
+![newuser](bigpot/static/images/newuser.png)
+
+- Login form
+
+![loginform](bigpot/static/images/loginform.png)
+
+- once you have logged in, 'login' is replaced with 'logout' on the menu
+
+![logout](bigpot/static/images/logout.png)
+
+
+<br>
+
+## Implemented features
+
+<br>
+
+**header**
+- This contains a navigation element in the form of a menu, when using on a tablet or a mobile device this changes to a drop-down menu.
+  
+**Easy desserts section on homepage**
+- Features an accordian, this dropped-down segment shows the recipe of the dessert.
+  
+**Contact page**
+- Features a contact form.
+
+**User accounts**
+- Sign up, login and leave your recipes/comments.
+  
+**Community page**
+- Features a working comments section, where comments can be edited or deleted.
+  
+**footer with socials.**
+- Social links to website's social media platform.
+
+<br>
+
+## Future features
+
+<br>
+
+1. A forum, for a better community experience. Users could create threads and sub-topics.
+2. Regular dessert recipe updates, more recipes.
+3. Industry recommendations, recommended tools to use. i.e cooking utensils.
+4. Video tutorials, show users visually how to make things/tips and tricks.
+5. Newsletters.
+6. FULL CRUD and data model for recipes.
+7. workflow for comment approvals so harmful content isn't automatically visible
+8. workflow for recipe submission
+
+<br>
+
+## Version Control
+
+<br>
+
+Version control for this project was managed using Git and GitHub. Git was used via the terminal in gitpod.io to commit changes.
+
+#### Commit Habits
+
+Commits were made throughout the development process to ensure that changes were tracked effectively. This approach not only provided a clear history of the project's progression, but also ensured that any changes could be rolled back if necessary.
+
+#### GitHub 
+
+GitHub was used as the remote repository for storing the project's code and resources. It provided a backup of the project and allowed it to be accessed from different locations.
+
+#### Contributors
+
+There are two contributors to this project. The primary contributor is myself, who developed all of the project. The second contributor is my mentor from Bristol, Ben Smith, who created a separate branch and committed code there as an **example** for the login process. This branch was not merged into the main library, but served as a valuable learning resource during the development process. 
+
+<br>
+
+## Testing
+
+### Validation html 
+
+- Homepage
+
+![homepagehtmltest](bigpot/static/images/homepagehtmltest.png)
+
+- About page
+
+![Aboutus](bigpot/static/images/abouthtmltest.png)
+
+- Contact page
+
+![Contactus](bigpot/static/images/contacthtmltest.png)
+
+- Community page
+
+![community](bigpot/static/images/communityhtmltest.png)
+
+- Login page
+
+![login](bigpot/static/images/loginhtmltest.png)
+
+- Sign up page
+
+![signup](bigpot/static/images/signuphtmltest.png)
+
+
+### Validation css
+
+- cookit.css
+
+![css validation](bigpot/static/images/cookitcssvalid.png)
+
+### Validation python
+
+- __init__.py
+
+![init.py](bigpot/static/images/initvalid.png)
+
+- Models.py
+
+![Models.py](bigpot/static/images/modelsvalid.png)
+
+- routes.py
+
+![routes.py](bigpot/static/images/routesvalid.png)
+
+- run.py
+
+![run.py](bigpot/static/images/runvalid.png)
+
+<br>
+
+### Manual testing
+
+- User created successfully
+
+![User created](bigpot/static/images/usercreated.png)
+
+- User not found
+
+![User not found](bigpot/static/images/usernotfound.png)
+
+- User exists, incorrect password
+
+![incorrect password](bigpot/static/images/incorrectpassword.png)
+
+- Attempt to add a comment without logging in.
+
+![add comment](bigpot/static/images/addcomment.png)
+
+- Delete comment
+
+![delete comment](bigpot/static/images/deletecomment.png)
+
+- Edit comment
+
+![edit comment](bigpot/static/images/editcomment.png)
+
+<br>
+
+- Other general testing
+
+
+<br>
+
+**Desktop**
+
+| Aspect        | Result         | Comment  |
+| ------------- |:-------------:| -----:|
+| Webpages load | Yes |  |
+| Layout appearances are correct | Yes |  |
+| Scroll works | Yes |  |
+| Logo link works | Yes |  |
+| All menu links work | Yes |  |
+| Hover features work | Yes |  |
+| Buttons work | Yes |  |
+| Forms work | Yes |  |
+| Footer links work | Yes |  |
+| Login/Logout function works |  Yes  |    |
+| comment section works | Yes | |
+
+<br>
+
+**Mobile**
+
+| Aspect        | Result         | Comment  |
+| ------------- |:-------------:| :----- |
+| Webpages load | Yes |  |
+| Layout appearances are correct | No | On small devices layout could be better ie. *index page* |
+| Scroll works | Yes |  |
+| Logo link works | Yes |  |
+| All menu links work | Yes |  |
+| Hover features work | Yes |  |
+| Buttons work | Yes |  |
+| Forms work | Yes |  |
+| comment section works | Yes | |
+| Footer links work | Yes |  |
+| Login/Logout function works |  Yes  |    |
+
+<br>
+
+
+## Accessibility Testing
+
+#### Colour contrast accessibility testing
+
+<br>
+
+![colour test](bigpot/static/images/cookitcolourtest.png)
+
+<br>
+
+#### Lighthouse
+
+<br>
+
+- index.html 
+
+(desktop) 
+
+![lighthouse index](bigpot/static/images/lighthouseindex.png)
+
+(mobile)
+
+![lighthouse index2](bigpot/static/images/lighthouseindex2.png)
+
+- about.html 
+
+(desktop) 
+
+![lighthouse about](bigpot/static/images/lighthouseabout.png)
+
+(mobile)
+
+![lighthouse about2](bigpot/static/images/lighthouseabout2.png)
+
+- contact.html 
+
+(desktop) 
+
+![lighthouse contact](bigpot/static/images/lighthousecontact.png)
+
+(mobile)
+
+![lighthouse contact2](bigpot/static/images/lighthousecontact2.png)
+
+- community.html 
+
+(desktop) 
+
+![lighthouse community](bigpot/static/images/lighthousecommunity.png)
+
+(mobile)
+
+![lighthouse community2](bigpot/static/images/lighthousecommunity2.png)
+
+
+
+<br>
+
+## Examples of Responsive design
+
+<br>
+
+- laptop
+
+![laptop view](bigpot/static/images/laptopview.png)
+
+- Ipad Air
+
+![ipad air view](bigpot/static/images/ipadairview.png)
+
+- ipad mini
+
+*menu has been opened*
+
+![ipad mini view](bigpot/static/images/ipadminiview.png)
+
+- iphone 14 pro max
+
+![iphone 14 pro max](bigpot/static/images/iphoneview.png)
+
+- samsung galaxy s20 ultra
+
+![samsung galaxy s20 ultra](bigpot/static/images/samsungs20ultra.png)
+
+
+<br>
+
+## Defects list
+
+<br>
+
+*On smaller screens the layout could do with some more organising, for a more user friendly experience.
+*Also the accordian on the homepage, on smaller screens could be better.
+
+<br>
+
+## Technologies used
+
+#### Programming Languages
+
+<br>
+
+- CSS 
+- HTML 
+- Flask
+- SQLAlchemy
+- Jinja
+- Python
+- JS 
+- Markdown
+
+<br>
+
+#### Frameworks and Extensions
+
+<br>
+
+- Bootstrap 4.7.0
+
+<br>
+
+#### Icons
+
+<br>
+
+- FontAwesome 4.7
+
+<br>
+
+#### Tools
+
+<br>
+
+- Github
+- Gitpod
+- Visual Studio
+- Pen and paper
+- Internet
+- Markdown table of contents generator
+- Favicon
+
+<br>
+
+## Deployment
+
+#### Follow the steps to deploy on Heroku. 
+
+1. From working in gitpod or anycoding space, create both a 'Procfile' and a 'requirements.txt' file.
+   
+   
+![procfile image](bigpot/static/images/procfileimage.png)
+
+
+2. Open heroku, and create a new app.
+3. Navigate to the 'settings', finding 'Config vars'. Here add your configuration information. see example below.
+
+**NOTE: THE INFORMATION DISPLAYED IN THE IMAGE BELOW IS FOR EXAMPLE PURPOSES**
+
+![config vars](bigpot/static/images/configvars.png)
+
+4. Find the deploy tab on the submenu at the top of the heroku page. Locate the deploy section on the page, either automatic or manual. Select Github and enter the name of your repository. Confirm and connect.
+   
+![deploy image](bigpot/static/images/deployimage.png)
+
+
+5. Scroll to the top of the heroku page and find 'Open app'. If successfully deployed your website should follow.
+
+
+
+<br>
+
+## Credits
+
+<br>
+
+- Code Institute Introduction to flask
+- Code Institutes Relational database walkthrough project
+- Code institute Lessons
+
+<br>
+
+## Content and Media
+
+#### The following websites were visited for inspiration/ideas;
+
+- https://www.startbootstrap.com/ - used a template layout and adjusted as needed.
+
+#### Icons
+
+<br>
+
+- https://fontawesome.com/v4/icons/
+
+<br>
+
+#### All images were taken from;
+
+<br>
+
+- www.bbcgoodfood.com
+- www.pngegg.com - Favicon "cook book"
+
+<br>
+
+#### Code related ideas;
+
+<br>
+
+- https://codepen.io
+- Code Institutes lessons
+- https://www.w3schools.com/
+
+<br>
+
+## Acknowledgements
+- https://www.site24x7.com/tools/javascript-validator.html
+- CodeInstitute template
+- **Malia Havlicek - mentor**
+- Chrome Developer Tools
+- https://color.a11y.com/
+- https://www.w3schools.com/
+- https://slack.com/
+- https://ui.dev/amiresponsive
+- https://jigsaw.w3.org/css-validator/
+- Lighthouse
+- Windows screen reader
+
