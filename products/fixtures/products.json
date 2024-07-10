@@ -1,0 +1,35 @@
+[
+  {
+      "model": "products.product",
+      "pk": 1,
+      "fields": {
+          "name": "Wooden Dragon",
+          "description": "Hand-carved wooden dragon sculpture.",
+          "price": "1500",
+          "category": 2,
+          "image": "products/wooden_dragon.jpg"
+      }
+  },
+  {
+      "model": "products.product",
+      "pk": 2,
+      "fields": {
+          "name": "Wooden Brush Set",
+          "description": "A set of hand-made wooden cooking brushes perfect for any kitchen.",
+          "price": "25",
+          "category": 6,
+          "image": "products/wooden_brush_set.jpg"
+      }
+  },
+  {
+      "model": "products.product",
+      "pk": 3,
+      "fields": {
+          "name": "Wooden Chair",
+          "description": "A beautifully crafted wooden chair for your home.",
+          "price": "200",
+          "category": 5,
+          "image": "products/wooden_chair.jpg"
+      }
+  }
+]
