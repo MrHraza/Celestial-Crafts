@@ -5,9 +5,7 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item text-muted">By Rating</a>
-                <a href="" class="dropdown-item text-muted">By Category</a>
+                <a href="{% url 'product_list' %}?sort=price&direction=asc"" class="dropdown-item">Sort By Price</a>
                 <a href="{% url 'product_list' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -17,7 +15,7 @@
                 Art
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="art-link">
-                <a href="" class="dropdown-item">Sculptures</a>
+                <a href="{% url 'product_list' %}?category=Sculptures" class="dropdown-item">Sculptures</a>
                 <a href="" class="dropdown-item text-muted">Decorations</a>
             </div>
         </li>
@@ -27,8 +25,8 @@
                 Homeware
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Furniture</a>
-                <a href="" class="dropdown-item">Kitchen</a>
+                <a href="{% url 'product_list' %}?category=Furniture" class="dropdown-item">Furniture</a>
+                <a href="{% url 'product_list' %}?category=Kitchen" class="dropdown-item">Kitchen</a>
                 <a href="" class="dropdown-item text-muted">Bathroom</a>
             </div>
         </li>
