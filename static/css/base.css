@@ -1,9 +1,11 @@
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
     font-family: "lato";
+    height: 100%;
 }
 
 .background-image-container {
@@ -45,6 +47,7 @@ body {
 .nav-link .fa-user, .nav-link .fa-shopping-bag {
     color: #5C4033;
 }
+
 .nav-link:hover .fa-user, .nav-link:hover .fa-shopping-bag {
     color: #a87861;
 }
@@ -131,7 +134,6 @@ body {
 .socials i{
     font-size: 25px;
 }
-
 
 /* --------------------------------- Media queries */
 
