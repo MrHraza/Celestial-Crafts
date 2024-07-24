@@ -13,7 +13,7 @@
 <div class="container d-flex flex-column min-vh-100 mb-5">
     <div class="row">
         <div class="col-12">
-            <h2 class="mb-2 mt-5 pb-2 pt-4 text-db text-center">Checkout</h2>
+            <h2 class="mb-2 mt-5 pb-2 pt-4 text-db">Checkout</h2>
             <hr>
         </div>
     </div>
@@ -57,5 +57,34 @@
 
 {% block postloadjs %}
 {{ block.super }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+<script>
+const stripe = Stripe('{{ stripe_publishable_key }}');
+const clientSecret = '{{ client_secret }}';
+
+const appearance = {
+    theme: 'flat',
+    variables: { colorPrimaryText: '#262626' }
+};
+
+const elements = stripe.elements({ clientSecret, appearance });
+const paymentElement = elements.create('payment');
+paymentElement.mount('#payment-element');
+
+
+const form = document.getElementById('payment-form');
+form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const { error } = await stripe.confirmPayment({
+        elements,
+        confirmParams: {
+            return_url: window.location.origin + "{% url 'order_success' %}",
+        },
+    });
+
+    if (error) {
+        console.log(error.message);
+    }
+});
+</script>
 {% endblock %}
