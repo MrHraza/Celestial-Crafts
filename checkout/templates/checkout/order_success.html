@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <div class="row">
+        <div class="col mb-5 text-center">
+            <h2 class="mb-5 py-2 text-db">Order Success!</h2>
+            <p>Thank you for your order! We will process it shortly.</p>
+            <a href="{% url 'product_list' %}" class="btn btn-db mt-3">Continue Shopping</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

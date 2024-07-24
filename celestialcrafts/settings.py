@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'bag',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -163,3 +164,10 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+#stripe
+
+STRIPE_CURRENCY = "gbp"
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'pk_test_51PQWq2KGBFdqGovicU7ppvOEGZNqU7REJaVjbmqQe2lp3CIl8WYXoQg4TvEYKYappK5yZFNq7HagXUYRt6wFFoom00RkRwbPOM')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51PQWq2KGBFdqGoviTu9uGzt6asZfNMfc24zOHjyLQr3inzoXw0AYOnimLLj1ICOyWHE2akp3pyKNOYzyf0162Iek00MV8akAQd')

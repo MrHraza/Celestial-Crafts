@@ -13,7 +13,7 @@
 <div class="container d-flex flex-column min-vh-100">
     <div class="row">
         <div class="col">
-            <h2 class="my-5 py-2">Shopping Bag</h2>
+            <h2 class="my-5 py-2 text-db">Shopping Bag</h2>
             {% if bag %}
                 <table class="table table-striped">
                     <thead>
@@ -28,14 +28,14 @@
                         {% for item in bag %}
                         <tr>
                             <td>
-                                {{ item.product.name }}
-                                <a href="{% url 'remove_from_bag' item.product.id %}" class="text-danger ml-2" aria-label="Remove">
+                                {{ item.product.name }}</td>
+                            <td>{{ item.quantity }}</td>
+                            <td>£{{ item.price }}</td>
+                            <td>£{{ item.total_price }}
+                                <a href="{% url 'remove_from_bag' item.product.id %}" class="text-danger pl-4" aria-label="Remove">
                                     <i class="fas fa-times-circle"></i>
                                 </a>
                             </td>
-                            <td>{{ item.quantity }}</td>
-                            <td>£{{ item.price }}</td>
-                            <td>£{{ item.total_price }}</td>
                         </tr>
                         {% endfor %}
                         <tr>
@@ -47,7 +47,7 @@
                 <br>
                 <div class="d-flex justify-content-end">
                     <a href="{% url 'product_list' %}" class="btn btn-secondary">Return to Products</a>
-                    <a href="#" class="btn btn-db ml-2">Proceed to Checkout</a>
+                    <a href="{% url 'checkout' %}" class="btn btn-db ml-2">Proceed to Checkout</a>
                 </div>
             {% else %}
                 <p class="mb-5">Your bag is empty.</p>
