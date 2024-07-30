@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.conf import settings
+from django.utils import timezone
 from .forms import OrderForm
-from .models import OrderItem, Order
+from .models import Order, OrderItem
 from bag.bag_operations import Bag
+from products.models import Product
 import stripe
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -12,37 +14,49 @@ def checkout(request):
     if request.method == 'POST':
         form = OrderForm(request.POST)
         if form.is_valid():
-            order = form.save()
+            print("Form is valid")
+            order = form.save(commit=False)
+            order.date = timezone.now() 
+            order.save() 
+            print(f"Order created: {date}")
+            
             for item in bag:
-                OrderItem.objects.create(
-                    order=order,
-                    product=item['product'],
-                    quantity=item['quantity'],
-                    price=item['price']
-                )
+                try:
+                    product = item['product']
+                    order_item = OrderItem(
+                        order=order,
+                        product=product,
+                        quantity=item['quantity'],
+                        price=item['price'],
+                    )
+                    order_item.save()
+                    print(f"Order item created: {order_item}")
+                except Product.DoesNotExist:
+                    print(f"Product with id {item['product'].id} does not exist")
+                    continue
+
+            bag.clear() 
+            print("Bag cleared")
             return redirect('order_success')
+
+        else:
+            print("Form is invalid")
+            print(form.errors)
     else:
+        print("GET request received")
         form = OrderForm()
 
     total_cost = bag.get_total_cost()
 
-    intent = stripe.PaymentIntent.create(
-        amount=int(total_cost * 100), 
-        currency='gbp',
-        automatic_payment_methods={
-            'enabled': True,
-        },
-    )
-
     return render(request, 'checkout/checkout.html', {
         'form': form,
-        'client_secret': intent.client_secret,
-        'grand_total': total_cost, 
-        'stripe_publishable_key': settings.STRIPE_PUBLIC_KEY
+        'stripe_publishable_key': settings.STRIPE_PUBLIC_KEY,
+        'client_secret': stripe.PaymentIntent.create(
+            amount=int(total_cost * 100),
+            currency=settings.STRIPE_CURRENCY,
+            automatic_payment_methods={'enabled': True},
+        ).client_secret
     })
 
 def order_success(request):
-    bag = Bag(request)
-    bag.clear()
     return render(request, 'checkout/order_success.html')
-
