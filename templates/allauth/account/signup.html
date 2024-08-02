@@ -1,38 +1,74 @@
 {% extends "account/base_entrance.html" %}
 {% load allauth i18n %}
+
 {% block head_title %}
     {% trans "Signup" %}
 {% endblock head_title %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
+
     {% element h1 %}
-        {% trans "Sign Up" %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-2 mt-5 pb-2 pt-4 text-db">Sign up</h2>
+                <hr>
+            </div>
+        </div>
+    </div>
+        
     {% endelement %}
+
     {% setvar link %}
         <a href="{{ login_url }}">
         {% endsetvar %}
         {% setvar end_link %}
         </a>
     {% endsetvar %}
-    {% element p %}
-        {% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
-    {% endelement %}
-    {% if not SOCIALACCOUNT_ONLY %}
-        {% url 'account_signup' as action_url %}
-        {% element form form=form method="post" action=action_url tags="entrance,signup" %}
-            {% slot body %}
-                {% csrf_token %}
-                {% element fields form=form unlabeled=True %}
+
+    <div class="container d-flex flex-column min-vh-100 mb-5">
+        <div class="row">
+            <div class="col-12 col-lg-6 offset-1">
+                <br>
+                {% element p %}
+                    {% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
                 {% endelement %}
-                {{ redirect_field }}
-            {% endslot %}
-            {% slot actions %}
-                {% element button tags="prominent,signup" type="submit" %}
-                    {% trans "Sign Up" %}
-                {% endelement %}
-            {% endslot %}
-        {% endelement %}
-    {% endif %}
-    {% if SOCIALACCOUNT_ENABLED %}
-        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
-    {% endif %}
+                <br>
+
+                {% if not SOCIALACCOUNT_ONLY %}
+                    {% url 'account_signup' as action_url %}
+                    {% element form form=form method="post" action=action_url tags="entrance,signup" %}
+
+                        {% slot body %}
+                            {% csrf_token %}
+                            {% element fields form=form unlabeled=True %}
+                            {% endelement %}
+                            {{ redirect_field }}
+                        {% endslot %}
+
+                        {% slot actions %}
+                            {% element button tags="prominent,signup" type="submit" %}
+                                {% trans "Sign Up" %}
+                            {% endelement %}
+                        {% endslot %}
+
+                    {% endelement %}
+                {% endif %}
+
+                {% if SOCIALACCOUNT_ENABLED %}
+                    {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
 {% endblock content %}
