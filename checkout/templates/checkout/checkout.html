@@ -10,40 +10,46 @@
 {% endblock %}
 
 {% block content %}
-<div class="container d-flex flex-column min-vh-100 mb-5">
+<div class="container">
     <div class="row">
         <div class="col-12">
             <h2 class="mb-2 mt-5 pb-2 pt-4 text-db">Checkout</h2>
             <hr>
         </div>
     </div>
+</div>
+<div class="container d-flex flex-column min-vh-100 mb-5">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            {% load crispy_forms_tags %}
+            <form action="{% url 'checkout' %}" id="payment-form" method="post">
+                <h4 class="text-db">Personal and Delivery details</h4>
+                <p class="text-muted">Please fill out the form below to complete your order</p>
+                <br>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <br>
+                <h4 class="text-db">Payment Details</h4>
+                <br>
+                <div id="payment-element"></div>
 
-<div class="row">
-    <div class="col-12 col-lg-6">
-        <p class="text-muted">Please fill out the form below to complete your order</p>
-
-        {% load crispy_forms_tags %}
-        <form action="{% url 'checkout' %}" id="payment-form" method="post">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <div id="payment-element"></div>
-
-            <div class="text-right mt-3">
-                <p class="small text-danger my-0">
-                    <span class="icon">
-                        <i class="fas fa-exclamation-circle"></i>
-                    </span>
-                    <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
-                </p>
-                <button type="submit" class="btn btn-db mt-2">
-                    <span class="icon">
-                        <i class="fas fa-lock"></i>
-                    </span>
-                    Confirm Order
-                </button>
-            </div>
-        </form>
-    </div>    
+                <div class="text-right mt-3">
+                    <p class="small text-danger my-0">
+                        <span class="icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
+                    </p>
+                    <button type="submit" class="btn btn-db mt-2">
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        Confirm Order
+                    </button>
+                </div>
+            </form>
+        </div>    
+    </div>
 </div>
 
 {% endblock %}
