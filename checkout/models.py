@@ -14,6 +14,7 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=80, blank=True, null=True)
     county = models.CharField(max_length=80, blank=True, null=True)
     date = models.DateTimeField(auto_now_add=True)  
+    total_cost = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
 
     def __str__(self):
         return self.full_name

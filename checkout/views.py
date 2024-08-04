@@ -5,21 +5,41 @@ from .forms import OrderForm
 from .models import Order, OrderItem
 from bag.bag_operations import Bag
 from products.models import Product
+from profiles.models import UserProfile
 import stripe
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 def checkout(request):
     bag = Bag(request)
+    initial_data = {}
+    if request.user.is_authenticated:
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            initial_data = {
+                'full_name': profile.default_full_name,
+                'email': request.user.email,
+                'phone_number': profile.default_phone_number,
+                'country': profile.default_country,
+                'postcode': profile.default_postcode,
+                'town_or_city': profile.default_town_or_city,
+                'street_address1': profile.default_street_address1,
+                'street_address2': profile.default_street_address2,
+                'county': profile.default_county,
+            }
+        except UserProfile.DoesNotExist:
+            pass
+
     if request.method == 'POST':
         form = OrderForm(request.POST)
         if form.is_valid():
             print("Form is valid")
             order = form.save(commit=False)
-            order.date = timezone.now() 
-            order.save() 
-            print(f"Order created: {date}")
-            
+            order.date = timezone.now()
+            order.total_cost = bag.get_total_cost()
+            order.save()
+            print(f"Order created: {order.date}")
+
             for item in bag:
                 try:
                     product = item['product']
@@ -35,7 +55,7 @@ def checkout(request):
                     print(f"Product with id {item['product'].id} does not exist")
                     continue
 
-            bag.clear() 
+            bag.clear()
             print("Bag cleared")
             return redirect('order_success')
 
@@ -44,7 +64,7 @@ def checkout(request):
             print(form.errors)
     else:
         print("GET request received")
-        form = OrderForm()
+        form = OrderForm(initial=initial_data)
 
     total_cost = bag.get_total_cost()
 
