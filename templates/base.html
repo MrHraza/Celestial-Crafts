@@ -64,7 +64,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 menu">
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                 <li class="list-inline-item dropdown">
                     <a class="text-db nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -82,7 +82,8 @@
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                                <a href="" class="dropdown-item">Product Management</a>
+                                <a href="{% url 'product_list' %}" class="dropdown-item">Manage Products</a>
+                                <a class="dropdown-item" href="{% url 'add_product' %}">Add Product</a>
                             {% endif %}
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -148,10 +149,10 @@
 </footer>
 
 {% block postloadjs %}
-<script>
-    $("#copyright").text(new Date().getFullYear());
-</script>
-
+    <script>
+        $("#copyright").text(new Date().getFullYear());
+        
+    </script>
 {% endblock %}
 
 </body>

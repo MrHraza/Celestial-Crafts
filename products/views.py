@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import user_passes_test
+from .forms import ProductForm
 from django.contrib import messages
 from django.db.models import Q, F
 from .models import Product, Category
@@ -54,3 +56,40 @@ def product_list(request):
 def product_detail(request, pk):
     product = get_object_or_404(Product, pk=pk)
     return render(request, 'products/product_detail.html', {'product': product})
+
+def superuser_required(view_func):
+    return user_passes_test(lambda u: u.is_superuser)(view_func)
+
+@superuser_required
+def add_product(request):
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Product added")
+            return redirect('product_list')
+    else:
+        form = ProductForm()
+    return render(request, 'products/add_product.html', {'form': form})
+
+@superuser_required
+def edit_product(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Product edited")
+            return redirect('product_list')
+    else:
+        form = ProductForm(instance=product)
+    return render(request, 'products/edit_product.html', {'form': form, 'product': product})
+
+@superuser_required
+def delete_product(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    if request.method == 'POST':
+        product.delete()
+        messages.success(request, "Product deleted")
+        return redirect('product_list')
+    return render(request, 'products/delete_product.html', {'product': product})

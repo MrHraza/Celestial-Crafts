@@ -52,6 +52,16 @@ body {
     color: #a87861;
 }
 
+/* Target the active link directly */
+.dropdown-menu a.active {
+    color: #5C4033;
+  }
+  
+  /* Target the link when it's focused */
+  .dropdown-menu a:focus {
+    color: #5C4033;
+  }
+
 .logo-font {
     text-transform: uppercase;
 }

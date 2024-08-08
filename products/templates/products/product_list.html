@@ -50,6 +50,13 @@
                                 <p class="text-center text-muted">Category: {{ product.category.name }}</p>
                                 <p class="card-text mt-auto font-weight-bold text-center text-db">£{{ product.price }}</p>
                                 <a href="{% url 'product_detail' product.id %}" class="btn btn-db btn-block mt-2">View Details</a>
+                                <br>
+                                {% if request.user.is_superuser %}
+                                    <small class="ml-3 text-right ">
+                                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
