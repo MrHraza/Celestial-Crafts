@@ -52,16 +52,6 @@ body {
     color: #a87861;
 }
 
-/* Target the active link directly */
-.dropdown-menu a.active {
-    color: #5C4033;
-  }
-  
-  /* Target the link when it's focused */
-  .dropdown-menu a:focus {
-    color: #5C4033;
-  }
-
 .logo-font {
     text-transform: uppercase;
 }
@@ -94,6 +84,11 @@ body {
 .btn-db:focus {
     background: #a87861;
     color: white;
+}
+
+.btn-db1:hover {
+    background-color: #3E2B22;
+    transition: background-color 0.3s ease;
 }
 
 .text-db {

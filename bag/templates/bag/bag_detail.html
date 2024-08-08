@@ -10,12 +10,23 @@
 {% endblock %}
 
 {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mb-2 mt-5 pb-2 pt-4 text-db">Shopping Bag</h2>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<br>
+
 <div class="container d-flex flex-column min-vh-100">
     <div class="row">
         <div class="col">
-            <h2 class="my-5 py-2 text-db">Shopping Bag</h2>
-            {% if bag %}
-                <table class="table table-striped">
+            {% if bag|length > 0 %}
+                <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">Product</th>

@@ -45,17 +45,21 @@
 
 <header class="container-fluid fixed-top">
     <div id="topnav" class="row bg-white pt-lg-4 d-none d-lg-flex">
+        <!--home link-->
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
                 <h2 class="logo-font text-db my-0"><strong>Celestial</strong><br> Crafts</h2>
             </a>
         </div>
+        <!--search bar-->
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <form method="GET" action="{% url 'product_list' %}">
                 <div class="input-group w-100">
-                    <input class="form-control border border-db rounded-0" type="text" name="q" placeholder="Search our site">
+                    <input class="form-control border border-db rounded-left" type="text" name="q" 
+                    placeholder="Search our site" style="box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
                     <div class="input-group-append">
-                        <button class="form-control btn btn-db border border-db rounded-0" type="submit">
+                        <button class="btn btn-db1 border border-db rounded-right" type="submit" 
+                        style="background-color: #5C4033; color: white; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
                             <span class="icon">
                                 <i class="fas fa-search"></i>
                             </span>
@@ -64,7 +68,8 @@
                 </div>
             </form>
         </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 menu">
+        <!--Site Management Menu-->
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                 <li class="list-inline-item dropdown">
                     <a class="text-db nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -110,6 +115,7 @@
             </ul>
         </div>
     </div>
+    <!--Site Navigation Menu-->
     <div class="row bg-white">
         <nav class="navbar navbar-expand-lg navbar-light w-100">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -151,7 +157,6 @@
 {% block postloadjs %}
     <script>
         $("#copyright").text(new Date().getFullYear());
-        
     </script>
 {% endblock %}
 
