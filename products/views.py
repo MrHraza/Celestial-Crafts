@@ -66,7 +66,6 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, "Product added")
             return redirect('product_list')
     else:
         form = ProductForm()
@@ -79,7 +78,6 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, "Product edited")
             return redirect('product_list')
     else:
         form = ProductForm(instance=product)
