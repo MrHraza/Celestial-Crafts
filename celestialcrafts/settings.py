@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-vl=-4&cod@##m1$sooq79%$44vz^g*rz$xfsbkjfbwcdcqs#m1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mrhraza-celestialcrafts-co9krw5fb3y.ws.codeinstitute-ide.net', 'celestial-crafts.herokuapp.com']
+ALLOWED_HOSTS = ['8000-mrhraza-celestialcrafts-co9krw5fb3y.ws.codeinstitute-ide.net', 'celestial-crafts-043fbda6275e.herokuapp.com']
 
 
 # Application definition
