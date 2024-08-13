@@ -7,7 +7,7 @@
             "description": "Hand-carved wooden dragon sculpture.",
             "price": "1500",
             "category": 2,
-            "image": "Wooden_Dragon_Sculpture.jpg"
+            "image": "products/Wooden_Dragon_Sculpture.jpg"
         }
     },
     {
@@ -18,7 +18,7 @@
             "description": "A set of hand-made wooden cooking brushes perfect for any kitchen.",
             "price": "25",
             "category": 6,
-            "image": "Wooden_Brush_Set.jpg"
+            "image": "products/Wooden_Brush_Set.jpg"
         }
     },
     {
@@ -29,7 +29,7 @@
             "description": "A beautifully crafted wooden chair for your home.",
             "price": "200",
             "category": 5,
-            "image": "Wooden_Chair.jpg"
+            "image": "products/Wooden_Chair.jpg"
         }
     },
     {
@@ -40,7 +40,7 @@
             "description": "A rustic wooden bowl perfect for serving or decoration.",
             "price": "50",
             "category": 6,
-            "image": "Rustic_Wooden_Bowl.jpg"
+            "image": "products/Rustic_Wooden_Bowl.jpg"
         }
     },
     {
@@ -51,7 +51,7 @@
             "description": "A sturdy wooden table, ideal for any dining room or kitchen.",
             "price": "600",
             "category": 5,
-            "image": "Wooden_Table.jpg"
+            "image": "products/Wooden_Table.jpg"
         }
     },
     {
@@ -62,7 +62,7 @@
             "description": "A finely detailed wooden compass, perfect for nautical enthusiasts.",
             "price": "80",
             "category": 3,
-            "image": "Wooden_Compass.jpg"
+            "image": "products/Wooden_Compass.jpg"
         }
     }
 ]
