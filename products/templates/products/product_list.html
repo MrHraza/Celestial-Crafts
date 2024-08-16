@@ -2,66 +2,67 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <header class="container header-container">
         <div class="row">
             <div class="col"></div>
         </div>
-    </div>
+    </header>
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
+<main class="container-fluid">
 
-        <div class="row justify-content-center page-title">
-            <div class="col text-center my-5">
-                <hr style="width: 50%;">
-                <h3 class="display-4 logo-font text-db letter-spacing">Products</h3>
-                <hr style="width: 50%;">
-            </div>
+    <!-- Page Title -->
+    <section aria-labelledby="products-title" class="row justify-content-center page-title">
+        <div class="col text-center my-5">
+            <hr style="width: 50%;">
+            <h1 id="products-title" class="display-4 logo-font text-db letter-spacing">Products</h1>
+            <hr style="width: 50%;">
         </div>
+    </section>
 
-         <!-- Messages block -->
-        {% if messages %}
-         <div class="message-container">
-             {% for message in messages %}
-                 <div class="alert alert-{{ message.tags }} text-center text-db py-5" style="font-style: italic;">
-                     <strong>{{ message }}</strong>
-                 </div>
-             {% endfor %}
-         </div>
-        {% endif %}
+    <!-- Messages block -->
+    {% if messages %}
+    <section aria-labelledby="messages" class="message-container">
+        {% for message in messages %}
+            <div id="messages" class="alert alert-{{ message.tags }} text-center text-db py-5" style="font-style: italic;">
+                <strong>{{ message }}</strong>
+            </div>
+        {% endfor %}
+    </section>
+    {% endif %}
 
-        <div class="container d-flex flex-column min-vh-100">
-            <div class="row justify-content-center">
-                {% for product in products %}
-                    <div class="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-stretch">
-                        <div class="card h-100 border-0 shadow-sm">
+    <!-- Products List -->
+    <section aria-labelledby="product-list" class="container d-flex flex-column min-vh-100">
+        <div id="product-list" class="row justify-content-center">
+            {% for product in products %}
+                <article class="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-stretch" role="article" aria-labelledby="product-{{ product.id }}">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <a href="{% url 'product_detail' product.id %}" aria-label="View details of {{ product.name }}">
                             {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                             {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="No image available for {{ product.name }}">
                             {% endif %}
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-center">{{ product.name }}</h5>
-                                <p class="text-center text-muted">Category: {{ product.category.name }}</p>
-                                <p class="card-text mt-auto font-weight-bold text-center text-db">£{{ product.price }}</p>
-                                <a href="{% url 'product_detail' product.id %}" class="btn btn-db btn-block mt-2">View Details</a>
-                                <br>
-                                {% if request.user.is_superuser %}
-                                    <small class="ml-3 text-right ">
-                                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                    </small>
-                                {% endif %}
-                            </div>
+                        </a>
+                        <div class="card-body d-flex flex-column">
+                            <h2 id="product-{{ product.id }}" class="card-title text-center">{{ product.name }}</h2>
+                            <p class="text-center text-muted">Category: {{ product.category.name }}</p>
+                            <p class="card-text mt-auto font-weight-bold text-center text-db">£{{ product.price }}</p>
+                            <a href="{% url 'product_detail' product.id %}" class="btn btn-db btn-block mt-2" aria-label="View details of {{ product.name }}">View Details</a>
+                            <br>
+                            {% if request.user.is_superuser %}
+                                <small class="ml-3 text-right ">
+                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                </small>
+                            {% endif %}
                         </div>
                     </div>
-                {% endfor %}
-            </div>
+                </article>
+            {% endfor %}
         </div>
-    </div>
+    </section>
+
+</main>
 {% endblock %}
