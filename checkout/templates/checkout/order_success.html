@@ -2,21 +2,21 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<header class="container header-container">
     <div class="row">
         <div class="col"></div>
     </div>
-</div>
+</header>
 {% endblock %}
 
 {% block content %}
-<div class="container d-flex flex-column min-vh-100 justify-content-center align-items-center">
-    <div class="row">
+<main class="container d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <section aria-labelledby="order-success-section" class="row">
         <div class="col mb-5 text-center">
-            <h2 class="mb-5 py-2 text-db">Order Success!</h2>
+            <h1 id="order-success-section" class="mb-5 py-2 text-db">Order Success!</h1>
             <p>Thank you for your order! We will process your order within 3-5 working days.</p>
             <a href="{% url 'product_list' %}" class="btn btn-db mt-3">Continue Shopping</a>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 {% endblock %}

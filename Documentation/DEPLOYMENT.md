@@ -15,7 +15,7 @@ Forks are used to propose changes to someone else's project or to use someone el
 
 To Fork a Github Repository:
 
-1. Log in to GitHub and go to the [GitHub Repository](https://github.com/Isabella-Mitchell/gather-recipe-website)
+1. Log in to GitHub and go to the [GitHub Repository](https://github.com/MrHraza/celestialcrafts)
 2. Locate the Fork button in the top-right corner of the page, click Fork.
 3. You should now have a copy of the original repository in your GitHub account.
 
@@ -25,7 +25,7 @@ You will now have a fork of the repository, but you don't have the files in that
 
 To make a local clone:
 
-1. Log in to GitHub and go to the [GitHub Repository](https://github.com/Isabella-Mitchell/lonely-house)
+1. Log in to GitHub and go to the [GitHub Repository](https://github.com/MrHraza/celestialcrafts)
 2. Above the list of files, click  Code.
 3. To clone the repository using HTTPS, under "Clone with HTTPS", click the 'Copy' icon. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click Use SSH, then click the 'Copy' icon. To clone a repository using GitHub CLI, click Use GitHub CLI, then click the 'Copy' icon.
 4. Open Git Bash.
@@ -40,7 +40,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 ```
 $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `lonely-house`...
+> Cloning into `Celestial-Crafts`...
 > remote: Counting objects: 10, done.
 > remote: Compressing objects: 100% (8/8), done.
 > remove: Total 10 (delta 1), reused 10 (delta 1)
@@ -53,7 +53,7 @@ Click [Here](https://docs.github.com/en/github-ae@latest/get-started/quickstart/
 
 You will need to create a database, unless you wish to pay for a Heroku database.
 
-1. Go to [ElephantSQL.com](https://elephantsql.com/) and select to create a database
+1. Go to [ElephantSQL.com](https://elephantsql.com/) and select create a database
 2. Select the free database plan
 3. Select “Log in with GitHub” and authorise with GitHub
 4. Create new team form. You can use your name, read and agree to the T&C's, select yes for GDPR, provide your email address and click Create Team. Your account will be created 
@@ -106,7 +106,7 @@ pip freeze > requirements.txt
 3. Create a Procfile. Open it and ensure it doesn't have a new line, as this can create errors. Ensure it starts with a capital P.
 4. In your Procfile, enter:
 ```
-web: gunicorn lonely_house.wsgi:application
+web: gunicorn Celestialcrafts.wsgi:application
 ```
 5. In the terminal, run the following and log into Heroku:
 ```
@@ -195,19 +195,12 @@ USE_AWS
 8. Back on Gitpod, git add, commit and push your changes.
 9. If your set up was correct, you should see a static folder in your S3 bucket, and your static files being rendered on the live site.
 
-## Adding Media Files & Connecting Stripe & Emails
+## Adding Media Files & Connecting Stripe
 
 1. In AWS, add a folder called media. Inside it upload any photos you want rendered. In this project, it will be the background splash image, and the holding image.
 2. Click next, manage public permissions and select manage public read access to these objects. Click next and upload.
-3. In your Stripe account, add the Heroku app URL with a new webhook endpoint.
-4. In Gitpod, update 'settings.py' with the new Stripe environment variables and email settings.
-5. In Heroku, under your project settings, add the following CONFIG_VARS with your variables:
+3. In Heroku, under your project settings, add the following CONFIG_VARS with your variables:
 ```
 STRIPE_PUBLIC_KEY
 STRIPE_SECRET_KEY
 ```
-6. In your desired email provider, create an app password to allow Django to create and send emails.
-
-
-
-Back to [README.md](/README.md)

@@ -2,45 +2,53 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <header class="container header-container">
         <div class="row">
             <div class="col"></div>
         </div>
-    </div>
+    </header>
 {% endblock %}
 
 {% block content %}
+<main>
 
-<!-- Messages block -->
-{% if messages %}
-<div class="message-container">
-    {% for message in messages %}
-        <div class="alert alert-{{ message.tags }} text-center text-db py-2" style="font-style: italic;">
-            <strong>{{ message }}</strong>
+    <!-- Messages Block -->
+    {% if messages %}
+    <section aria-labelledby="messages">
+        <div class="message-container">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} text-center text-db py-2" style="font-style: italic;">
+                    <strong>{{ message }}</strong>
+                </div>
+            {% endfor %}
         </div>
-    {% endfor %}
-</div>
-{% endif %}
+    </section>
+    {% endif %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="mb-2 mt-5 pb-2 pt-4 text-db">Edit Product</h2>
-            <hr>
+    <!-- Page Title -->
+    <section aria-labelledby="edit-product-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 id="edit-product-section" class="mb-2 mt-5 pb-2 pt-4 text-db">Edit Product</h1>
+                    <hr>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<div class="container d-flex flex-column min-vh-100 mb-5">
-    <div class="row">
-        <div class="col-6 text-db">
-            <form method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button type="submit" class="btn btn-db float-right px-3 my-3">Save</button>
-            </form>
+    <!-- Edit Product Form -->
+    <section aria-labelledby="edit-product-form" class="container d-flex flex-column min-vh-100 mb-5">
+        <div class="row">
+            <div class="col-6 text-db">
+                <form id="edit-product-form" method="post" enctype="multipart/form-data" aria-labelledby="edit-product-section">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit" class="btn btn-db float-right px-3 my-3" aria-label="Save changes to product">Save</button>
+                </form>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 
+</main>
 {% endblock %}

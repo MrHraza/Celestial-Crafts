@@ -2,46 +2,46 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<header class="container header-container">
     <div class="row">
         <div class="col"></div>
     </div>
-</div>
+</header>
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
+<main class="container">
+    <section aria-labelledby="checkout-section" class="row">
         <div class="col-12">
-            <h2 class="mb-2 mt-5 pb-2 pt-4 text-db">Checkout</h2>
+            <h1 id="checkout-section" class="mb-2 mt-5 pb-2 pt-4 text-db">Checkout</h1>
             <hr>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 <div class="container d-flex flex-column min-vh-100 mb-5">
-    <div class="row">
+    <section aria-labelledby="personal-details-section" class="row">
         <div class="col-12 col-lg-6">
             {% load crispy_forms_tags %}
-            <form action="{% url 'checkout' %}" id="payment-form" method="post">
-                <h4 class="text-db">Personal and Delivery details</h4>
-                <p class="text-muted">Please fill out the form below to complete your order</p>
+            <form action="{% url 'checkout' %}" id="payment-form" method="post" aria-describedby="form-description">
+                <h2 id="personal-details-section" class="text-db">Personal and Delivery Details</h2>
+                <p id="form-description" class="text-muted">Please fill out the form below to complete your order</p>
                 <br>
                 {% csrf_token %}
                 {{ form|crispy }}
                 <br>
-                <h4 class="text-db">Payment Details</h4>
+                <h2 id="payment-details-section" class="text-db">Payment Details</h2>
                 <br>
                 <div id="payment-element"></div>
 
                 <div class="text-right mt-3">
-                    <p class="small text-danger my-0">
-                        <span class="icon">
+                    <p class="small text-danger my-0" aria-live="polite">
+                        <span class="icon" aria-hidden="true">
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
                         <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
                     </p>
                     <button type="submit" class="btn btn-db mt-2">
-                        <span class="icon">
+                        <span class="icon" aria-hidden="true">
                             <i class="fas fa-lock"></i>
                         </span>
                         Confirm Order
@@ -49,9 +49,8 @@
                 </div>
             </form>
         </div>    
-    </div>
+    </section>
 </div>
-
 {% endblock %}
 
 {% block postloadjs %}

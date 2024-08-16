@@ -1,4 +1,4 @@
-<p align="center"><img src="static/favicon/android-chrome-512x512.png"/></p>
+<p align="center"><img src="/static/favicon/android-chrome-512x512.png"/></p>
 
 <br>
 <br>

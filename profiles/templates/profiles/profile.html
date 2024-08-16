@@ -2,87 +2,96 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<header class="container header-container">
     <div class="row">
         <div class="col"></div>
     </div>
-</div>
+</header>
 {% endblock %}
 
 {% block content %}
+<main>
 
-<!-- Messages block -->
-{% if messages %}
-<div class="message-container">
-    {% for message in messages %}
-        <div class="alert alert-{{ message.tags }} text-center text-db py-2" style="font-style: italic;">
-            <strong>{{ message }}</strong>
+    <!-- Messages block -->
+    {% if messages %}
+    <section aria-labelledby="messages-section">
+        <div class="message-container">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} text-center text-db py-2" style="font-style: italic;" role="alert">
+                    <strong>{{ message }}</strong>
+                </div>
+            {% endfor %}
         </div>
-    {% endfor %}
-</div>
-{% endif %}
+    </section>
+    {% endif %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="mb-2 mt-5 pb-2 pt-4 text-db">My Profile</h2>
-            <hr>
+    <!-- Profile Header -->
+    <section aria-labelledby="profile-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 id="profile-section" class="mb-2 mt-5 pb-2 pt-4 text-db">My Profile</h1>
+                    <hr>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<div class="container d-flex flex-column min-vh-100 mb-5">
-    <div class="row">
-        <div class="col-md-6 text-db">
-            <h4>Default Details</h4>
-            <br>
-            <form method="post">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button type="submit" class="btn btn-db my-4 float-right">Update Profile</button>
-            </form>
-        </div>
+    <!-- Profile Form and Order History -->
+    <section aria-labelledby="profile-details-section" class="container d-flex flex-column min-vh-100 mb-5">
+        <div class="row">
+            <!-- Default Details Form -->
+            <div class="col-md-6 text-db">
+                <h2 id="profile-details-section">Default Details</h2>
+                <form method="post" aria-describedby="profile-details-section">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit" class="btn btn-db my-4 float-right">Update Profile</button>
+                </form>
+            </div>
 
-        <div class="col-md-6 text-db">
-            <h4>Order History</h4>
-            {% if orders %}
-                <table class="table">
-                    <br>
-                    <thead class="text-left">
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Quantity</th>
-                            <th>Date</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-left" style="font-size: small;">
-                        {% for order in orders %}
-                        <tr>
-                            <td>
-                                <ul style="list-style: none;">
-                                    {% for item in order.items.all %}
-                                    <li>{{ item.product.name }}</li>
-                                    {% endfor %}
-                                </ul>
-                            </td>
-                            <td>
-                                <ul style="list-style: none;">
-                                    {% for item in order.items.all %}
-                                    <li>{{ item.quantity }}</li>
-                                    {% endfor %}
-                                </ul>
-                            </td>
-                            <td>{{ order.date }}</td>
-                            <td>£{{ order.total_cost }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            {% else %}
-                <p>You have no past orders.</p>
-            {% endif %}
+            <!-- Order History -->
+            <div class="col-md-6 text-db">
+                <h2>Order History</h2>
+                {% if orders %}
+                    <table class="table">
+                        <thead class="text-left">
+                            <tr>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-left" style="font-size: small;">
+                            {% for order in orders %}
+                            <tr>
+                                <td>
+                                    <ul style="list-style: none; padding-left: 0;">
+                                        {% for item in order.items.all %}
+                                        <li>{{ item.product.name }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul style="list-style: none; padding-left: 0;">
+                                        {% for item in order.items.all %}
+                                        <li>{{ item.quantity }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </td>
+                                <td>{{ order.date }}</td>
+                                <td>£{{ order.total_cost }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>You have no past orders.</p>
+                {% endif %}
+            </div>
         </div>
-    </div>
-</div>
+    </section>
+
+</main>
 {% endblock %}
