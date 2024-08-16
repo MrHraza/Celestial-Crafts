@@ -163,3 +163,35 @@ body {
         padding-top: 164px;
     }
 }
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    #topnav h2.logo-font {
+        font-size: 1.5rem; 
+    }
+
+    #topnav .fa-user, #topnav .fa-shopping-bag {
+        font-size: 1.2rem; 
+    }
+
+    #topnav p.my-0 {
+        font-size: 0.9rem;
+    }
+
+    .navbar-toggler {
+        font-size: 0.875rem;
+    }
+
+    .dropdown-menu a.dropdown-item {
+        font-size: 0.9rem; 
+    }
+
+    #topnav .list-inline-item {
+        margin: 0 5px;
+    }
+
+    .footer-section-box p.copyright {
+        font-size: 0.75rem;
+    }
+}
+

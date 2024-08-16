@@ -24,22 +24,15 @@
 - [User Stories](#user-stories)
 - [Developer](#developer)
 - [Design choices](#design-choices)
-- [Wireframes](#wireframes)
 - [Features](#features)
 - [Interactive Design Elements](#interactive-design-elements)
 - [Implemented features](#implemented-features)
 - [Future features](#future-features)
 - [Version Control](#version-control)
-- [Testing](#testing)
-- [Accessibility Testing](#accessibility-testing)
-- [Examples of Responsive design](#examples-of-responsive-design)
 - [Defects list](#defects-list)
 - [Outstanding defects](#outstanding-defects)
 - [Technologies used](#technologies-used)
-- [Deployment](#deployment)
-- [Credits](#credits)
-- [Content and Media](#content-and-media)
-- [Acknowledgements](#acknowledgements)
+
 
 <br>
 
@@ -49,19 +42,19 @@
 
 ![cook it website display](bigpot/static/images/responsiveui.png)
 
-"Cook it" is aimed at dessert enthusiasts of all skill levels, from amateur home cooks to seasoned bakers. Whether you're looking to discover new dessert recipes, share your own culinary creations, engage with a vibrant community of like-minded individuals, or simply indulge your sweet tooth, "Cook it" provides a welcoming and inclusive platform for everyone passionate about desserts
+This site provides a seamless shopping experience for craft enthusiasts, home decorators, and gift shoppers, featuring a range of items such as art, homeware, and furniture. The platform is designed with a user-friendly interface, mobile responsiveness, and secure payment integration, ensuring an enjoyable and reliable shopping experience.
 
 <br>
 
 ## Live Site
 
-- https://cook-it-31a1cb906548.herokuapp.com/
+- https://celestial-crafts-043fbda6275e.herokuapp.com/
 
 <br>
 
 ## Repository
 
-- https://github.com/MrHraza/Cook-it
+- https://github.com/MrHraza/Celestial-Crafts
 
 <br>
 
@@ -75,16 +68,7 @@ Developer  -  *Husnain Raza*
 
 <br>
 
-*   **Dessert Enthusiasts:** Individuals who have a passion for desserts and enjoy exploring new recipes, techniques, and flavor combinations.
-    
-*   **Home Cooks:** People who love to bake and create delicious desserts in the comfort of their own kitchens, ranging from beginners to experienced home cooks.
-    
-*   **Food Bloggers and Influencers:** Content creators who specialize in sharing food-related content, including dessert recipes, cooking tutorials, and culinary tips.
-    
-*   **Culinary Enthusiasts:** Individuals who have a general interest in cooking and baking and are eager to expand their culinary repertoire with sweet treats.
-    
-*   **Community-Minded Individuals:** People who value online communities and enjoy engaging with others who share similar interests, such as exchanging recipe ideas, providing feedback, and participating in discussions about desserts.
-
+The target audience for Celestial Crafts includes craft enthusiasts, home decorators, and gift shoppers who appreciate unique, handmade, and artisanal products. These individuals are likely interested in high-quality, aesthetically pleasing items that add a personal touch to their homes or make thoughtful gifts.
   
 <br>
 
@@ -96,11 +80,9 @@ Developer  -  *Husnain Raza*
 
 2. **User-Friendly Design:** Create an appealing website layout that ensures easy navigation for visitors, allowing them to access information effortlessly.
 
-3. **Professional Presentation:** Craft a professional online presence for Husnain, incorporating a clean design, well-organized content, and easy-to-read sections, such as about me, and experience and referneces.
+3. **Mobile Responsiveness:** Ensure the website is responsive across various devices, including smartphones, tablets, and desktops, optimizing the user experience for all visitors.
 
-4. **Mobile Responsiveness:** Ensure the website is responsive across various devices, including smartphones, tablets, and desktops, optimizing the user experience for all visitors.
-
-5. **Call-to-Action (CTA):** Include clear call-to-action elements, such as a contact form or buttons and prompting visitors to engage further.
+4. **Call-to-Action (CTA):** Include clear call-to-action elements, such as a stripe payment method or buttons and prompting visitors to engage further.
    
 <br>
 
@@ -108,9 +90,27 @@ Developer  -  *Husnain Raza*
 
 <br>
 
-1. I want to view a list of recipes so that I can explore different deserts.
-2. I want to view the ingredients and method of a recipe so that I can understand how to prepare the dish.
-3. I want to add comments on the Community page when I am logged in so that I can engage with the website and its community.
+*Visitor*
+
+> As a visitor, I want to browse different categories of crafts so that I can find products that interest me.
+
+*Customer*
+
+> As a customer, I want to search for products by name or keyword so that I can quickly find what I'm looking for.
+> I want to view product details, including images, descriptions, and prices, so that I can make an informed purchase decision.
+> I want to add products to my shopping bag so that I can review them before purchasing.
+> I want to proceed to checkout and enter my payment information so that I can complete my purchase.
+> I want to save items in my cart for later so that I can purchase them in the future.
+
+*User*
+
+> As a user, I want to log in to my account so that I can manage my profile and view my order history.
+> I want to register an account so that I can save my details for future purchases.
+> I want to access the website on my mobile device so that I can shop on the go.
+
+*Admin*
+
+> As an admin, I want to add, edit, or delete products so that I can manage the inventory on the website.
 
 
 <br>
@@ -129,51 +129,39 @@ As a Developer I want to push myself and demonstrate my ability with different c
 
 #### Colours
 
-In this project, the color palette, I chose, consisting of black, white, light grey, and dark grey evokes a sleek, modern, and sophisticated aesthetic. 
+In this project the color palette consists of black, white, light brown, and dark brown. This in my opinion was a strong and thoughtful choice for the following reasons; 
 
-This combination often conveys a sense of professionalism, elegance, and minimalism. 
+- **Warm and Earthly tones**: Light brown and dark brown evoke a sense of warmth, comfort, and nature. These colors are associated with organic materials like wood, leather, and earth, which align perfectly with a crafts website that focuses on handmade, artisanal products.
 
-It may also elude to a theme of sophistication and refinement, appealing to users who appreciate clean and contemporary design. 
+- **Proffessional and Timless contrast**: The Black and White combination ensures that the website looks polished and organized, which is important for user experience and readability.
 
-Additionally, it can create a sense of balance and clarity, allowing the *focus* to remain on the content, whether it's showcasing mouthwatering dessert images or providing insightful baking tips.
+- **Emotional and Psychological Impact**: Dark brown is often associated with reliability, stability, and support, which are great qualities to convey in a business centered on handmade products. It can give customers the impression that your products are made with care and attention to detail.
+
 
 <br>
 
 #### Typography
 
-I used two fonts on this website for their combined effect; Lora and Times New Roman.
+I used one font throughout for its populatrity in webdesign, 'Lato'.
 
-*   **Lora:** This is a serif font with a modern twist. Its graceful curves and balanced proportions provide a touch of sophistication while maintaining readability. Lora's versatility makes it suitable for both body text and headings.
-    
-*   **Times New Roman:** This is a well-known serif font that exudes tradition and professionalism. Its clean lines and distinctive letterforms make it highly legible, especially in longer passages of text. Times New Roman is often associated with formal documents and publications, giving the website a polished and authoritative feel.
+**Lato:**
 
-Thus, by combining Lora and Times New Roman, one can create a harmonious typographic palette that enhances the overall visual appeal. Lora adds a contemporary flair, while Times New Roman brings a sense of familiarity and credibility, resulting in a refined and inviting user experience.
+- The font's design strikes a balance between being friendly and approachable while maintaining a professional tone.
+- I found that it has been designed with excellent readability in mind, both at small and large sizes. Its clean lines and balanced proportions ensure that text remains legible across different devices and screen resolutions. 
+- The font’s letter spacing and weight distribution make it easy on the eyes, which enhances the user experience.
+- Lato was designed specifically for the web, so it renders well across different browsers and operating systems.
 
 <br>
 
 #### Imagery
 
-Four images in total of the finished dessert of the given recipe can be seen on the website.
+Seven images in total, a background on the homepage and six products displayed on the products page can be seen on the website.
 
 <br>
 
 #### Site Structure
 
-I have opted for a multi-page website as this offers flexibility, organization, and scalability, making it an effective platform for "Cook it" to showcase its diverse range of dessert recipes, culinary resources, and community engagement features to its audience.
-
-<br>
-
-## Wireframes
-
-<br>
-
-- desktop > general template to follow for all pages
-
-![computerwireframe](bigpot/static/images/computer.jpg)
-
-- tablet/phone > general template to follow for all pages
-
-![phonewireframe](bigpot/static/images/phone.jpg)
+I have opted for a multi-page website as this offers flexibility, organization, and scalability.
 
 <br>
 
@@ -184,13 +172,13 @@ I have opted for a multi-page website as this offers flexibility, organization, 
 From the user stories I have understood that what the client requires is a website that showcases the following:
 
 *Clean and Intuitive Design:*
-- Visually appealing layout with adequate white space. Easy-to-read fonts and appropriate font sizes. Consistent color scheme that complements the content.
+- Visually appealing layout with adequate white space. Easy-to-read font and appropriate font sizes. Consistent color scheme that complements the content.
 
 *Clear Navigation:* 
-- Intuitive menu or navigation bar for easy access to different pages.
+- Intuitive menu or navigation bar for easy access to different pages. Ability to Search and item.
   
 *Different pages:* 
-- Namely; About, contact, community/forum.
+- Namely; Products, Shopping bag, Checkout & Login.
 
 *Visual Enhancements:*
 - High-quality images, that are relevant and add value.
@@ -202,7 +190,7 @@ From the user stories I have understood that what the client requires is a websi
 - Links to relevant social media (Twitter, facebook, Instagram etc.).
 
 *Call-to-Action (CTA):*
-- A clear CTA for users i.e contact form.
+- A clear CTA for users i.e Secure Payment system.
 
 <br>
 
@@ -210,53 +198,58 @@ From the user stories I have understood that what the client requires is a websi
 
 <br>
 
-**menu**  
-- Hovering over a menu item *subtly* (see 'contact us') hightlights the item.
+**Menu**  
+- Hovering over a menu item *subtly* (see 'Art > Sculptures') hightlighted item.
 
-![menu](bigpot/static/images/menu.png)
+![menu](/static/images/menu.png)
 
 - Menu is condensed to a dropdown on smaller screens. (see hamburger icon)
 
-![hamburger-menu](bigpot/static/images/hamburger-menu.png)
+![smallscreen-menu](/static/images/smallscreen-menu.png)
 
 
 **Buttons** 
-- Working/linked buttons are used on the website (see 'edit' or 'delete' on the community page).
+- Working/linked buttons are used on the website (see 'browse shop' which is linked to the products page).
 
-![buttons](bigpot/static/images/buttons.png)
+![buttons](/static/images/browseshop-button.png)
+
+**Search bar** 
+- Working search feature to quickly navigate the products.
+
+![search bar](/static/images/searchbar.png)
+
+Search results.
+
+![search results](/static/images/searchresults.png)
 
 
-**Contact form**
-- This is a working contact form that is connected to the clients Gmail account allowing him to respond to messages.
+**Stripe Element**
+- This is a working stripe element that is connected to stripe and is allowing purchases to be made, it also has a record of purchases made.
 
-![contact form](bigpot/static/images/contactform.png)
+![stripe element](bigpot/static/images/contactform.png)
 
 Then sent.
 
-![message sent](bigpot/static/images/messagesent.png)
+![strip eweb](bigpot/static/images/messagesen.png)
 
 
 **Social links**
-- Cook it socials can be found here, hovering over twitter to highlight.
+- Celestialcrafts socials can be found in the footer.
 
-![social links](bigpot/static/images/sociallinks.png)
-
+![social links](/static/images/social-links.png)
 
 **Sign-up/Login**
 - Sign-up form 
 
-![signupform](bigpot/static/images/signupform.png)
-
-![newuser](bigpot/static/images/newuser.png)
+![signup](/static/images/signup.png)
 
 - Login form
 
-![loginform](bigpot/static/images/loginform.png)
+![loginform](/static/images/login.png)
 
-- once you have logged in, 'login' is replaced with 'logout' on the menu
+- once you have logged in, 'My Account' on the navigation area is replaced with your username.
 
-![logout](bigpot/static/images/logout.png)
-
+![loggedin](/static/images/loggedin.png)
 
 <br>
 
@@ -265,19 +258,19 @@ Then sent.
 <br>
 
 **header**
-- This contains a navigation element in the form of a menu, when using on a tablet or a mobile device this changes to a drop-down menu.
+- This contains a navigation element in the form of a menu. When browsing the website on a tablet or a mobile device this changes to a drop-down menu.
   
-**Easy desserts section on homepage**
-- Features an accordian, this dropped-down segment shows the recipe of the dessert.
+**Products page**
+- Features a catalogue of products.
   
-**Contact page**
-- Features a contact form.
+**Checkout page**
+- Features a Stripe element.
 
 **User accounts**
-- Sign up, login and leave your recipes/comments.
+- Sign up, login and create a profile.
   
-**Community page**
-- Features a working comments section, where comments can be edited or deleted.
+**Store Manager**
+- Once the store owner/admin logs in, additional menu links are accessable to add/edit/delete products.
   
 **footer with socials.**
 - Social links to website's social media platform.
@@ -288,14 +281,19 @@ Then sent.
 
 <br>
 
-1. A forum, for a better community experience. Users could create threads and sub-topics.
-2. Regular dessert recipe updates, more recipes.
-3. Industry recommendations, recommended tools to use. i.e cooking utensils.
-4. Video tutorials, show users visually how to make things/tips and tricks.
-5. Newsletters.
-6. FULL CRUD and data model for recipes.
-7. workflow for comment approvals so harmful content isn't automatically visible
-8. workflow for recipe submission
+1. Customer Reviews and Ratings: Allow customers to leave reviews and rate products, which can help build trust and provide valuable feedback for other shoppers.
+
+2. Wishlist Functionality: Enable users to save items to a wishlist for future purchases, enhancing user experience and increasing potential sales.
+
+3. Advanced Search and Filters: Improve the search functionality with advanced filters (e.g., by price, category, popularity, or availability) to help users find products more easily.
+
+4. Product Customization Options: Allow customers to customize products (e.g., choosing colors, adding engravings) for a more personalized shopping experience.
+
+5. Gift Wrapping and Message Options: Provide an option for customers to add gift wrapping and a personalized message to their orders, ideal for gifts.
+
+6. Multiple Payment Gateways: Expand payment options to include digital wallets like Apple Pay, Google Pay, or cryptocurrency, offering more flexibility to customers.
+
+7. Email Notifications and Marketing: Implement automated email notifications for order confirmations, shipping updates, and abandoned carts, as well as targeted marketing campaigns.
 
 <br>
 
@@ -315,9 +313,21 @@ GitHub was used as the remote repository for storing the project's code and reso
 
 #### Contributors
 
-There are two contributors to this project. The primary contributor is myself, who developed all of the project. The second contributor is my mentor from Bristol, Ben Smith, who created a separate branch and committed code there as an **example** for the login process. This branch was not merged into the main library, but served as a valuable learning resource during the development process. 
+I am the sole developer of this project.
 
 <br>
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Testing
 
