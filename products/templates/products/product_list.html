@@ -33,10 +33,10 @@
     {% endif %}
 
     <!-- Products List -->
-    <section aria-labelledby="product-list" class="container d-flex flex-column min-vh-100">
+    <div aria-labelledby="product-list" class="container d-flex flex-column min-vh-100">
         <div id="product-list" class="row justify-content-center">
             {% for product in products %}
-                <article class="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-stretch" role="article" aria-labelledby="product-{{ product.id }}">
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-stretch" aria-labelledby="product-{{ product.id }}">
                     <div class="card h-100 border-0 shadow-sm">
                         <a href="{% url 'product_detail' product.id %}" aria-label="View details of {{ product.name }}">
                             {% if product.image %}
@@ -59,10 +59,10 @@
                             {% endif %}
                         </div>
                     </div>
-                </article>
+                </div>
             {% endfor %}
         </div>
-    </section>
-
+    </div>
+    
 </main>
 {% endblock %}
