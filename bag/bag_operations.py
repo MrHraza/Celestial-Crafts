@@ -1,6 +1,7 @@
 from decimal import Decimal
 from products.models import Product
 
+
 class Bag:
     def __init__(self, request):
         self.session = request.session
@@ -47,4 +48,3 @@ class Bag:
     def clear(self):
         del self.session['bag']
         self.save()
-

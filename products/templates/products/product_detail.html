@@ -14,7 +14,7 @@
     <div class="row">
         
         <!-- Product Image Section -->
-        <div aria-labelledby="product-image" class="col-12 col-md-6 col-lg-4 offset-lg-2">
+        <section aria-labelledby="product-image" class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div id="product-image" class="image-container my-5">
                 {% if product.image %}
                     <a href="{{ product.image.url }}" target="_blank" aria-label="View larger image of {{ product.name }}">
@@ -26,7 +26,7 @@
                     </a>
                 {% endif %}
             </div>
-        </div>
+        </section>
         
         <!-- Product Details Section -->
         <section aria-labelledby="product-details" class="col-12 col-md-6 col-lg-4">
@@ -44,7 +44,7 @@
                 {% endif %}
                 
                 <!-- Product Name and Details -->
-                <h1 class="logo-font text-db">{{ product.name }}</h1>
+                <h1 class="text">{{ product.name }}</h1>
                 <p class="text-muted">Category: {{ product.category.name }}</p>
                 <p><em>{{ product.description }}</em></p>
                 <p class="font-weight-bold">£{{ product.price }}</p>
@@ -73,6 +73,7 @@
                         </button>
                     </div>
                 </form>
+                
             </div>
         </section>
     </div>

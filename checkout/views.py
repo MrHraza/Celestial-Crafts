@@ -10,6 +10,7 @@ import stripe
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
+
 def checkout(request):
     bag = Bag(request)
     initial_data = {}
@@ -52,7 +53,9 @@ def checkout(request):
                     order_item.save()
                     print(f"Order item created: {order_item}")
                 except Product.DoesNotExist:
-                    print(f"Product with id {item['product'].id} does not exist")
+                    print(
+                         f"Product with id {item['product'].id} does not exist"
+                        )
                     continue
 
             bag.clear()
@@ -77,6 +80,7 @@ def checkout(request):
             automatic_payment_methods={'enabled': True},
         ).client_secret
     })
+
 
 def order_success(request):
     return render(request, 'checkout/order_success.html')

@@ -4,9 +4,9 @@ from django.contrib import messages
 from .models import UserProfile
 from .forms import UserProfileForm
 
+
 @login_required
 def profile(request):
-    
     profile, created = UserProfile.objects.get_or_create(user=request.user)
 
     orders = profile.get_order_history()
