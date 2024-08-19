@@ -55,22 +55,20 @@
 
 - laptop
 
-![laptop view]()
+![Laptop view](/static/images/laptop-view.png)
 
 - Ipad Air
 
-![ipad air view]()
+![ipad air](/static/images/ipad-air.png)
 
-- ipad mini
+- iphone xr
 
-*menu has been opened*
+![iphone xr](/static/images/iphone-xr.png)
 
-![ipad mini view]()
+- samsung galaxy A51
 
-- iphone 14 pro max
+![samsung galaxy A51](/static/images/samsung-galaxy-a51.png)
 
-![iphone 14 pro max]()
+- samsung galaxy s8
 
-- samsung galaxy s20 ultra
-
-![samsung galaxy s20 ultra]()
+![samsung galaxy s8](/static/images/samsung-galaxy-s8.png)
