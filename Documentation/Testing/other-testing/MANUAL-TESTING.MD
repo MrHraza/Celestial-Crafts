@@ -1,38 +1,6 @@
+## General testing
 
-### Manual testing
-
-- User created successfully
-
-![User created](bigpot/static/images/usercreated.png)
-
-- User not found
-
-![User not found](bigpot/static/images/usernotfound.png)
-
-- User exists, incorrect password
-
-![incorrect password](bigpot/static/images/incorrectpassword.png)
-
-- Attempt to add a comment without logging in.
-
-![add comment](bigpot/static/images/addcomment.png)
-
-- Delete comment
-
-![delete comment](bigpot/static/images/deletecomment.png)
-
-- Edit comment
-
-![edit comment](bigpot/static/images/editcomment.png)
-
-<br>
-
-- Other general testing
-
-
-<br>
-
-**Desktop**
+### Desktop
 
 | Aspect        | Result         | Comment  |
 | ------------- |:-------------:| -----:|
@@ -46,24 +14,63 @@
 | Forms work | Yes |  |
 | Footer links work | Yes |  |
 | Login/Logout function works |  Yes  |    |
-| comment section works | Yes | |
+| Shopping bag functions work | Yes | |
+| Checkout functions work (stripe) | Yes | |
+| Notifications appear | Yes | |
+| Details can be saved to profile | Yes | |
+| Order history feature works | Yes | |
+| Management features work | Yes | |
+| Images load correctly  | Yes | |
+| Django backend admin feature work | Yes | |
 
 <br>
 
-**Mobile**
+### Mobile
 
 | Aspect        | Result         | Comment  |
 | ------------- |:-------------:| :----- |
-| Webpages load | Yes |  |
-| Layout appearances are correct | No | On small devices layout could be better ie. *index page* |
+| Webpages load | Yes | The webpages load slower than desktop |
+| Layout appearances are correct | No | On small devices layout could be better |
 | Scroll works | Yes |  |
 | Logo link works | Yes |  |
 | All menu links work | Yes |  |
-| Hover features work | Yes |  |
+| Hover features work |  | No (unable to hover on mobile) |
 | Buttons work | Yes |  |
 | Forms work | Yes |  |
-| comment section works | Yes | |
 | Footer links work | Yes |  |
 | Login/Logout function works |  Yes  |    |
+| Shopping bag functions work | Yes | |
+| Checkout functions work (stripe) | Yes | |
+| Notifications appear | Yes | |
+| Details can be saved to profile | Yes | |
+| Order history feature works | Yes | |
+| Management features work | Yes | |
+| Images load correctly  | Yes & No | on the smallest screen images don't load correctly |
 
 <br>
+
+## Examples of Responsive design
+
+<br>
+
+- laptop
+
+![laptop view]()
+
+- Ipad Air
+
+![ipad air view]()
+
+- ipad mini
+
+*menu has been opened*
+
+![ipad mini view]()
+
+- iphone 14 pro max
+
+![iphone 14 pro max]()
+
+- samsung galaxy s20 ultra
+
+![samsung galaxy s20 ultra]()
