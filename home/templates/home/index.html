@@ -2,21 +2,21 @@
 {% load static %}
 
 {% block page_header %}
-    <header class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </header>
+<header class="container-fluid header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</header>
 {% endblock %}
 
 {% block content %}
 <main>
     <div class="container-fluid background-image-container outer-box" role="img" aria-label="Background image with crafts theme">
-        <div class="container mx-auto text-center gap-2 gap">
+        <div class="container text-center gap-2 gap">
             
             <!-- Main page title -->
             <section aria-labelledby="page-title" class="row justify-content-center page-title">
-                <div class="col-12 col-md-8 text-center">
+                <div class="col-12 col-md-10 col-lg-8 text-center">
                     <h1 id="page-title" class="display-4 logo-font letter-spacing">
                         <em>Crafts beyond the<br>ordinary</em>
                     </h1>
@@ -24,30 +24,29 @@
             </section>
             
             <!-- Description section -->
-            <section aria-labelledby="description-section" class="container gap">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-10">
-                        <div class="blurred-background p-4">
-                            <h2 id="description-section" class="text-center text-db">Discover Our Unique Crafts</h2>
-                            <p class="text-center text-db">
-                                Our shop offers a diverse range of handmade crafts, each one crafted with care and attention to detail. From beautiful wall hangings to intricately designed tables, 
-                                you'll find items that are not only visually stunning but also made to last. Explore our collection and find the perfect piece to add to your home or to gift 
-                                to a loved one. All products are made upon purchase. 
-                            </p>
-                        </div>
+            <section aria-labelledby="description-section" class="row justify-content-center gap">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="blurred-background p-4">
+                        <h2 id="description-section" class="text-center text-db">Discover Our Unique Crafts</h2>
+                        <p class="text-center text-db">
+                            Our shop offers a diverse range of handmade crafts, each one crafted with care and attention to detail. From beautiful wall hangings to intricately designed tables, 
+                            you'll find items that are not only visually stunning but also made to last. Explore our collection and find the perfect piece to add to your home or to gift 
+                            to a loved one. All products are made upon purchase. 
+                        </p>
                     </div>
                 </div>
             </section>
             
             <!-- Browse shop button -->
-            <div class="text-center my-5">
-                <h2>
-                    <a href="{% url 'product_list' %}" class="shop-now-button btn rounded-5 text-uppercase py-3 letter-spacing button-shadow" aria-label="Browse our shop and discover unique crafts">Browse shop</a>
-                </h2>
+            <div class="row justify-content-center my-5">
+                <div class="col-auto">
+                    <h2>
+                        <a href="{% url 'product_list' %}" class="shop-now-button btn rounded-5 text-uppercase py-3 letter-spacing button-shadow" aria-label="Browse our shop and discover unique crafts">Browse shop</a>
+                    </h2>
+                </div>
             </div>
             
         </div>
     </div>
 </main>
 {% endblock %}
-
