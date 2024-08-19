@@ -38,14 +38,16 @@
     </section>
 
     <!-- Edit Product Form -->
-    <section aria-labelledby="edit-product-form" class="container d-flex flex-column min-vh-100 mb-5">
-        <div class="row">
-            <div class="col-6 text-db">
-                <form id="edit-product-form" method="post" enctype="multipart/form-data" aria-labelledby="edit-product-section">
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <button type="submit" class="btn btn-db float-right px-3 my-3" aria-label="Save changes to product">Save</button>
-                </form>
+    <section aria-labelledby="edit-product-form">
+        <div class="container d-flex flex-column min-vh-100 mb-5">
+            <div class="row">
+                <div class="col-6 text-db">
+                    <form id="edit-product-form" method="post" enctype="multipart/form-data" aria-labelledby="edit-product-section">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button type="submit" class="btn btn-db float-right px-3 my-3" aria-label="Save changes to product">Save</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

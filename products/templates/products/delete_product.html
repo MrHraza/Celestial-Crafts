@@ -25,15 +25,17 @@
     </section>
 
     <!-- Delete Product Confirmation -->
-    <section aria-labelledby="delete-product-confirmation" class="container d-flex flex-column min-vh-100 mb-5">
-        <div class="row">
-            <div class="col-6 text-db">
-                <p id="delete-product-confirmation">Are you sure you want to delete "{{ product.name }}"?</p>
-                <form method="post" aria-describedby="delete-product-confirmation">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger" aria-label="Confirm deletion of {{ product.name }}">Delete</button>
-                    <a href="{% url 'product_list' %}" class="btn btn-secondary">Cancel</a>
-                </form>
+    <section aria-labelledby="delete-product-confirmation">
+        <div class="container d-flex flex-column min-vh-100 mb-5">
+            <div class="row">
+                <div class="col-6 text-db">
+                    <p id="delete-product-confirmation">Are you sure you want to delete "{{ product.name }}"?</p>
+                    <form method="post" aria-describedby="delete-product-confirmation">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger" aria-label="Confirm deletion of {{ product.name }}">Delete</button>
+                        <a href="{% url 'product_list' %}" class="btn btn-secondary">Cancel</a>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
