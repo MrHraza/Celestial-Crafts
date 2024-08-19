@@ -57,6 +57,13 @@ body {
     color: #5C4033;
 }
 
+.text {
+    color: #5C4033;
+    font-family: "lato";
+    font-weight: 300;
+    font-size: large;
+}
+
 .main-logo-link {
     width: fit-content;
     background-color: #a8776157;
