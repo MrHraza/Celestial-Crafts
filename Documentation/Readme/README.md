@@ -321,7 +321,6 @@ I am the sole developer of this project.
 <br>
 
 *On smaller screens the layout could do with some more organising, for a more user friendly experience.
-*Also the accordian on the homepage, on smaller screens could be better.
 
 <br>
 

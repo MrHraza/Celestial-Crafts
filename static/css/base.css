@@ -157,7 +157,6 @@ body {
   }
 }
 
-
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -172,7 +171,6 @@ body {
     }
 }
 
-/* Mobile-specific styles */
 @media (max-width: 768px) {
     #topnav h2.logo-font {
         font-size: 1.5rem; 
@@ -203,3 +201,16 @@ body {
     }
 }
 
+@media (max-width: 576px) {
+    .page-title h1 {
+        font-size: 2rem;
+    }
+
+    #description-section {
+        font-size: 1.5rem;
+    }
+
+    .blurred-background p {
+        font-size: 1rem;
+    }
+}
